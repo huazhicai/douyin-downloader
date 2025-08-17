@@ -26,12 +26,13 @@ logger = logging.getLogger("douyin_downloader")
 console = Console()
 
 class Download(object):
-    def __init__(self, thread=5, music=True, cover=True, avatar=True, resjson=True, folderstyle=True):
+    def __init__(self, thread=5, music=True, cover=True, avatar=True, resjson=True, comment=True, folderstyle=True):
         self.thread = thread
         self.music = music
         self.cover = cover
         self.avatar = avatar
         self.resjson = resjson
+        self.comment = comment
         self.folderstyle = folderstyle
         self.console = Console()
         self.progress = Progress(
@@ -49,7 +50,7 @@ class Download(object):
     def _download_media(self, url: str, path: Path, desc: str) -> bool:
         """通用下载方法，处理所有类型的媒体下载"""
         if path.exists():
-            self.console.print(f"[cyan]⏭️  跳过已存在: {desc}[/]")
+            self.console.print(f"[cyan]跳过已存在: {desc}[/]")
             return True
             
         # 使用新的断点续传下载方法替换原有的下载逻辑

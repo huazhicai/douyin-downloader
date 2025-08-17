@@ -308,7 +308,7 @@ def _handle_post_like_mode(dy, dl, key, mode, userPath):
     datalist = dy.getUserInfo(
         key, 
         mode, 
-        35, 
+        135,
         configModel["number"][mode], 
         configModel["increase"][mode],
         start_time=configModel.get("start_time", ""),
@@ -498,6 +498,7 @@ def update_config_from_args(args):
     configModel["increase"]["allmix"] = args.allmixincrease
     configModel["increase"]["mix"] = args.mixincrease
     configModel["increase"]["music"] = args.musicincrease
+
 
 if __name__ == "__main__":
     main()
