@@ -308,7 +308,7 @@ def _handle_post_like_mode(dy, dl, key, mode, userPath):
     datalist = dy.getUserInfo(
         key, 
         mode, 
-        135,
+        35,
         configModel["number"][mode], 
         configModel["increase"][mode],
         start_time=configModel.get("start_time", ""),
