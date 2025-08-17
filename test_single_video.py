@@ -11,7 +11,7 @@ def test_single_video_api():
     """测试单个视频API"""
 
     # 测试用的aweme_id（从搜索结果中找到的真实ID）
-    test_aweme_id = "7065264218437717285"  # 这是搜索结果中提到的真实ID
+    test_aweme_id = "7538929120571575612"  # 这是搜索结果中提到的真实ID
 
     urls = Urls()
     utils_instance = Utils()
